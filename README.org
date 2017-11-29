@@ -23,58 +23,58 @@
 총 50개의 변수로 23개의 양적 변수와 27개의 질적 변수가 있습니다.
 
 ** 질적 변수
-| 변수 이름      | 범위            | 설명    |
-|----------------+-----------------+---------|
-| Gender         | 1=Male;0=Female | 성별    |
-| Symtoms        | 1=Yes;0=No      | 증상 여부 |
-| Alcohol        | 1=Yes;0=No      |         |
-| HBsAg          | 1=Yes;0=No      |         |
-| HBeAg          | 1=Yes;0=No      |         |
-| HBcAb          | 1=Yes;0=No      |         |
-| HCVAb          | 1=Yes;0=No      |         |
-| Cirrhosis      | 1=Yes;0=No      |         |
-| Endemic        | 1=Yes;0=No      |         |
-| Smoking        | 1=Yes;0=No      |         |
-| Diabetes       | 1=Yes;0=No      |         |
-| Obesity        | 1=Yes;0=No      |         |
-| Hemochro       | 1=Yes;0=No      |         |
-| AHT            | 1=Yes;0=No      |         |
-| CRI            | 1=Yes;0=No      |         |
-| HIV            | 1=Yes;0=No      |         |
-| NASH           | 1=Yes;0=No      |         |
-| Varices        | 1=Yes;0=No      |         |
-| Spleno         | 1=Yes;0=No      |         |
-| PHT            | 1=Yes;0=No      |         |
-| PVT            | 1=Yes;0=No      |         |
-| Metastasis     | 1=Yes;0=No      |         |
-| Hallmark       | 1=Yes;0=No      |         |
-| PS             | 0,1,2,3,4,5     |         |
-| Encephalopathy | 1,2,3           |         |
-| Ascites        | 1,2,3           |         |
-| Class          | 1=lives;0=dies  |         |
+| 변수 이름      | 범위            | 설명                            |
+|----------------+-----------------+---------------------------------|
+| Gender         | 1=Male;0=Female | 성별                            |
+| Symtoms        | 1=Yes;0=No      | 증상 여부(통증, 황달 등)        |
+| Alcohol        | 1=Yes;0=No      | 음주 여부                       |
+| HBsAg          | 1=Yes;0=No      | B형 간염 보균 여부(B형간염항원 검사) |
+| HBeAg          | 1=Yes;0=No      | B형 간염 보호 가능 여부(B형간염항체 검사) |
+| HBcAb          | 1=Yes;0=No      | 병력 여부                       |
+| HCVAb          | 1=Yes;0=No      |                                 |
+| Cirrhosis      | 1=Yes;0=No      | 간경변 여부                     |
+| Endemic        | 1=Yes;0=No      | 거주국가내 풍토병 여부          |
+| Smoking        | 1=Yes;0=No      | 흡연 여부                       |
+| Diabetes       | 1=Yes;0=No      | 당뇨병 진단 여부                |
+| Obesity        | 1=Yes;0=No      | 비만 여부                       |
+| Hemochro       | 1=Yes;0=No      | 혈색소침착증 여부               |
+| AHT            | 1=Yes;0=No      | 동맥 고혈압                     |
+| CRI            | 1=Yes;0=No      | 만성 신부전증                   |
+| HIV            | 1=Yes;0=No      | HIV 바이러스                    |
+| NASH           | 1=Yes;0=No      | 무알콜 지방성 간염              |
+| Varices        | 1=Yes;0=No      | 식도염                          |
+| Spleno         | 1=Yes;0=No      | 비장 비대증                     |
+| PHT            | 1=Yes;0=No      |                                 |
+| PVT            | 1=Yes;0=No      |                                 |
+| Metastasis     | 1=Yes;0=No      | 간 전이 여부                    |
+| Hallmark       | 1=Yes;0=No      |                                 |
+| PS             | 0,1,2,3,4,5     |                                 |
+| Encephalopathy | 1,2,3           |                                 |
+| Ascites        | 1,2,3           |                                 |
+| Class          | 1=lives;0=dies  | 생사 여부                       |
 ** 양적 변수
-| 변수 이름  | 범위          |
-|------------+---------------|
-| Age        | 20 ~ 93       |
-| Grams/day  | 0-500         |
-| Packs/year | 0-510         |
-| INR        | 0.84 ~ 4.82   |
-| AFP        | 1.2 ~ 1810346 |
-| Hemoglobin | 5 ~ 18.7      |
-| MCV        | 69.5 ~ 119.6  |
-| Leucocytes | 2.2 ~ 13000   |
-| Platelets  | 1.71 ~ 459000 |
-| Albumin    | 1.9 ~ 4.9     |
-| Total Bil  | 0.3 ~ 40.5    |
-| ALT        | 11 ~ 420      |
-| AST        | 17 ~ 553      |
-| GGT        | 23 ~ 1575     |
-| ALP        | 1.28 ~ 980    |
-| TP         | 3.9 ~ 102     |
-| Creatinine | 0.2 ~ 7.6     |
-| Nodules    | 0 ~ 5         |
-| Major Dim  | 1.5 ~ 22      |
-| Dir. Bil   | 0.1 ~ 29.3    |
-| Iron       | 0 ~ 244       |
-| Sat        | 0 ~ 126       |
-| Ferritin   | 0 ~ 2230      |
+| 변수 이름  | 범위          | 설명            |
+|------------+---------------+-----------------|
+| Age        | 20 ~ 93       | 진단 나이       |
+| Grams/day  | 0-500         | 일별 음주량(그램) |
+| Packs/year | 0-510         | 연간 흡연량(갑) |
+| INR        | 0.84 ~ 4.82   | 국제 표준화 비율 |
+| AFP        | 1.2 ~ 1810346 |                 |
+| Hemoglobin | 5 ~ 18.7      | 헤모글로빈(g/dL) |
+| MCV        | 69.5 ~ 119.6  | 평균혈구용적(fl) |
+| Leucocytes | 2.2 ~ 13000   | 백혈구(G/L)     |
+| Platelets  | 1.71 ~ 459000 | 혈소판(G/L)     |
+| Albumin    | 1.9 ~ 4.9     | 알부민(mg/dL)   |
+| Total Bil  | 0.3 ~ 40.5    | 총 빌리루빈(mg/dL) |
+| ALT        | 11 ~ 420      |                 |
+| AST        | 17 ~ 553      |                 |
+| GGT        | 23 ~ 1575     |                 |
+| ALP        | 1.28 ~ 980    |                 |
+| TP         | 3.9 ~ 102     |                 |
+| Creatinine | 0.2 ~ 7.6     | 크레아티닌(mg/dL) |
+| Nodules    | 0 ~ 5         | 종양 개수       |
+| Major Dim  | 1.5 ~ 22      |                 |
+| Dir. Bil   | 0.1 ~ 29.3    |                 |
+| Iron       | 0 ~ 244       |                 |
+| Sat        | 0 ~ 126       | 산소포화도(%)   |
+| Ferritin   | 0 ~ 2230      | 페리틴(ng/mL)   |
