@@ -146,3 +146,41 @@
 변수 개수에 따라서 얼만큼의 데이터를 사용할 수 있는가를 나타낸 그래프이다.
 
 반응변수로 사용할 Symptoms 변수가 포함되었을 때는 총 36개의 변수와 91개의 데이터를 온전히 사용할 수 있다.
+91개의 데이터를 사용할 때 사용할 수 있는 변수는 아래의 표와 같다.
+
+| Gender         |
+| Symptoms       |
+| Alcohol        |
+| HBsAg          |
+| HCVAb          |
+| Cirrhosis      |
+| Diabetes       |
+| Obesity        |
+| AHT            |
+| CRI            |
+| HIV            |
+| Spleno         |
+| PHT            |
+| PVT            |
+| Metastasis     |
+| Hallmark       |
+| Age            |
+| PS             |
+| Encephalopathy |
+| Ascites        |
+| INR            |
+| AFP            |
+| Hemoglobin     |
+| MCV            |
+| Leucocytes     |
+| Platelets      |
+| Albumin        |
+| Total          |
+| ALT            |
+| AST            |
+| GGT            |
+| ALP            |
+| TP             |
+| Creatinine     |
+| Nodules        |
+| Class          |
