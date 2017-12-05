@@ -13,7 +13,7 @@ available.data <- function (csv.data, withPrint = FALSE) {
         for (col.num in 1:col.count) {
             if (length(which(csv.data[col.num] == '?')) <= missing.count) {
                 var.count = var.count + 1
-                var.names[col.num] = names(csv.data)[col.num]
+                var.names[col.num] = col.names[col.num]
                 na <- is.na(replace(c(1:row.count), csv.data[col.num] == '?', NA))
                 all.data = replace(all.data, na, FALSE)
             }
@@ -34,3 +34,23 @@ result = available.data(hcc)
 png('plots/data-missing.png')
 plot(x = result$instance, y = result$variable, xlab = 'instances', ylab = 'variables')
 dev.off()
+
+columns = c("Gender", "Symptoms", "Alcohol", "HBsAg", "HCVAb", "Cirrhosis", "Diabetes", "Obesity", "AHT", "CRI", "HIV", "Spleno", "PHT", "PVT", "Metastasis", "Hallmark", "Age", "PS", "Encephalopathy", "Ascites", "INR", "AFP", "Hemoglobin", "MCV", "Leucocytes", "Platelets", "Albumin", "Total.Bil", "ALT", "AST", "GGT", "ALP", "TP", "Creatinine", "Nodules", "Class")
+
+drop.empty <- function (csv.data) {
+    row.count = length(csv.data[,1])
+    col.count = length(csv.data[1,])
+    row.drop = c()
+    result = csv.data
+    for (col.num in 1:col.count) {
+        for (row.num in which(csv.data[[col.num]] == '?')) {
+            row.drop = c(row.drop, row.num)
+            }
+    }
+    if (length(row.drop) > 0) {
+        result = result[-row.drop,]
+        rownames(result) <- 1:nrow(result)
+    }
+    return(result)
+}
+drop.empty(hcc[columns])

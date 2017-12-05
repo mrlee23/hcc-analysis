@@ -1,3 +1,4 @@
+#+OPTIONS: num:t
 #+TITLE: 생활 습관 및 질병에 따른 간암 증상 분석
 #+DATE: 2017-11-27 
 
@@ -26,7 +27,7 @@
 | 변수 이름      | 범위            | 설명                            |
 |----------------+-----------------+---------------------------------|
 | Gender         | 1=Male;0=Female | 성별                            |
-| Symtoms        | 1=Yes;0=No      | 증상 여부(통증, 황달 등)        |
+| Symptoms       | 1=Yes;0=No      | 증상 여부(통증, 황달 등)        |
 | Alcohol        | 1=Yes;0=No      | 음주 여부                       |
 | HBsAg          | 1=Yes;0=No      | B형 간염 보균 여부(B형간염항원 검사) |
 | HBeAg          | 1=Yes;0=No      | B형 간염 보호 가능 여부(B형간염항체 검사) |
@@ -107,80 +108,39 @@
 | PVT            |        3 |        1.8 |
 | Metastasis     |        4 |        2.4 |
 | Hallmark       |        2 |        1.2 |
-| Age            |        0 |          0 |
-| Grams.day      |       48 |       29.1 |
-| Packs.year     |       53 |       32.1 |
 | PS             |        0 |          0 |
-| Encephalopathy |        1 |        0.6 |
-| Ascites        |        2 |        1.2 |
-| INR            |        4 |        2.4 |
-| AFP            |        8 |        4.8 |
+| Encephalopathy |       48 |       29.1 |
+| Ascites        |       53 |       32.1 |
+| Class          |        0 |          0 |
+| Age            |        1 |        0.6 |
+| Grams.day      |        2 |        1.2 |
+| Packs.year     |        4 |        2.4 |
+| INR            |        8 |        4.8 |
+| AFP            |        3 |        1.8 |
 | Hemoglobin     |        3 |        1.8 |
 | MCV            |        3 |        1.8 |
 | Leucocytes     |        3 |        1.8 |
-| Platelets      |        3 |        1.8 |
-| Albumin        |        6 |        3.6 |
-| Total          |        5 |        3.0 |
-| ALT            |        4 |        2.4 |
+| Platelets      |        6 |        3.6 |
+| Albumin        |        5 |        3.0 |
+| Total.Bil      |        4 |        2.4 |
+| ALT            |        3 |        1.8 |
 | AST            |        3 |        1.8 |
 | GGT            |        3 |        1.8 |
-| ALP            |        3 |        1.8 |
-| TP             |       11 |        6.7 |
-| Creatinine     |        7 |        4.2 |
-| Nodules        |        2 |        1.2 |
-| Major          |       20 |       12.1 |
-| Dir            |       44 |       26.7 |
-| Iron           |       79 |       47.9 |
+| ALP            |       11 |        6.7 |
+| TP             |        7 |        4.2 |
+| Creatinine     |        2 |        1.2 |
+| Nodules        |       20 |       12.1 |
+| Major.Dim      |       44 |       26.7 |
+| Dir.Bil        |       79 |       47.9 |
+| Iron           |       80 |       48.5 |
 | Sat            |       80 |       48.5 |
-| Ferritin       |       80 |       48.5 |
-| Class          |        0 |          0 |
+| Ferritin       |        0 |          0 |
 #+TBLFM: $3=($2/165)*100;f1
 
 * 데이터 수정
 
 모든 변수가 누락되지 않은 데이터는 165개중 8개에 불과하다. 따라서 변수의 수를 줄여 적절한 데이터 개수와 변수 개수를 맞춰야한다.
 
-[[./plots/data-missing.png]]
+이 문제는 변수선택문제와는 별개로 어떤 변수를 선택하느냐에 때라 데이터의 수가 달라지게 된다.
 
-위의 그래프의 x 축은 누락되지 않은 데이터 개수이고, 세로축은 변수 개수이다.
-변수 개수에 따라서 얼만큼의 데이터를 사용할 수 있는가를 나타낸 그래프이다.
-
-반응변수로 사용할 Symptoms 변수가 포함되었을 때는 총 36개의 변수와 91개의 데이터를 온전히 사용할 수 있다.
-91개의 데이터를 사용할 때 사용할 수 있는 변수는 아래의 표와 같다.
-
-| Gender         |
-| Symptoms       |
-| Alcohol        |
-| HBsAg          |
-| HCVAb          |
-| Cirrhosis      |
-| Diabetes       |
-| Obesity        |
-| AHT            |
-| CRI            |
-| HIV            |
-| Spleno         |
-| PHT            |
-| PVT            |
-| Metastasis     |
-| Hallmark       |
-| Age            |
-| PS             |
-| Encephalopathy |
-| Ascites        |
-| INR            |
-| AFP            |
-| Hemoglobin     |
-| MCV            |
-| Leucocytes     |
-| Platelets      |
-| Albumin        |
-| Total          |
-| ALT            |
-| AST            |
-| GGT            |
-| ALP            |
-| TP             |
-| Creatinine     |
-| Nodules        |
-| Class          |
+[[./data-manipulation.R][data-manipulation.R]] 에서 데이터에 변수를 선택한 후 =drop.empty= 를 사용해서 누락된 데이터를 제거한 데이터 프레임을 얻을 수 있다.
