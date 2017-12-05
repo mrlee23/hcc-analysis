@@ -35,8 +35,59 @@ png('plots/data-missing.png')
 plot(x = result$instance, y = result$variable, xlab = 'instances', ylab = 'variables')
 dev.off()
 
-columns = c("Gender", "Symptoms", "Alcohol", "HBsAg", "HCVAb", "Cirrhosis", "Diabetes", "Obesity", "AHT", "CRI", "HIV", "Spleno", "PHT", "PVT", "Metastasis", "Hallmark", "Age", "PS", "Encephalopathy", "Ascites", "INR", "AFP", "Hemoglobin", "MCV", "Leucocytes", "Platelets", "Albumin", "Total.Bil", "ALT", "AST", "GGT", "ALP", "TP", "Creatinine", "Nodules", "Class")
-
+## columns = c("Gender", "Symptoms", "Alcohol", "HBsAg", "HCVAb", "Cirrhosis", "Diabetes", "Obesity", "AHT", "CRI", "HIV", "Spleno", "PHT", "PVT", "Metastasis", "Hallmark", "Age", "PS", "Encephalopathy", "Ascites", "INR", "AFP", "Hemoglobin", "MCV", "Leucocytes", "Platelets", "Albumin", "Total.Bil", "ALT", "AST", "GGT", "ALP", "TP", "Creatinine", "Nodules", "Class")
+columns = c("Gender", "Symptoms", "Alcohol", "HBsAg", "HBeAg", "HBcAb", "HCVAb", "Cirrhosis", "Endemic", "Smoking", "Diabetes", "Obesity", "Hemochro", "AHT", "CRI", "HIV", "NASH", "Varices", "Spleno", "PHT", "PVT", "Metastasis", "Hallmark", "PS", "Encephalopathy", "Ascites", "Class", "Age", "Grams.day", "Packs.year", "INR", "AFP", "Hemoglobin", "MCV", "Leucocytes", "Platelets", "Albumin", "Total.Bil", "ALT", "AST", "GGT", "ALP", "TP", "Creatinine", "Nodules", "Major.Dim", "Dir.Bil", "Iron", "Sat", "Ferritin")
+columns = c("Gender"
+            ,"Symptoms"
+            ,"Alcohol"
+            ,"HBsAg"
+            ,"HBeAg"
+            ,"HBcAb"
+            ,"HCVAb"
+            ,"Cirrhosis"
+            ## ,"Endemic"
+            ,"Smoking"
+            ,"Diabetes"
+            ,"Obesity"
+            ,"Hemochro"
+            ,"AHT"
+            ,"CRI"
+            ,"HIV"
+            ,"NASH"
+            ## ,"Varices"
+            ## ,"Spleno"
+            ,"PHT"
+            ,"PVT"
+            ,"Metastasis"
+            ,"Hallmark"
+            ,"PS"
+            ## ,"Encephalopathy"
+            ,"Ascites"
+            ,"Class"
+            ,"Age"
+            ,"Grams.day"
+            ,"Packs.year"
+            ,"INR"
+            ,"AFP"
+            ,"Hemoglobin"
+            ,"MCV"
+            ,"Leucocytes"
+            ,"Platelets"
+            ,"Albumin"
+            ,"Total.Bil"
+            ,"ALT"
+            ,"AST"
+            ,"GGT"
+            ,"ALP"
+            ,"TP"
+            ,"Creatinine"
+            ,"Nodules"
+            ## ,"Major.Dim"
+            ## ,"Dir.Bil"
+            ## ,"Iron"
+            ## ,"Sat"
+            ,"Ferritin"
+            )
 drop.empty <- function (csv.data) {
     row.count = length(csv.data[,1])
     col.count = length(csv.data[1,])
